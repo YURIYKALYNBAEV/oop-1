@@ -27,12 +27,12 @@ public class Car {
      */
     public Car(String brand, String model, double engine, String color, int year, String country) {
 
-        if (brand == "" || brand == null) {
+        if (brand.isEmpty() || brand == null) {
             this.brand = "default";
         } else {
             this.brand = brand;
         }
-        if (model == "" || model == null) {
+        if (model.isEmpty() || model == null) {
             this.model = "default";
         } else {
             this.model = model;
@@ -42,7 +42,7 @@ public class Car {
         } else {
             this.engine = engine;
         }
-        if (color == "" || color == null) {
+        if (color.isEmpty() || color == null) {
             this.color = "белый";
         } else {
             this.color = color;
@@ -52,7 +52,7 @@ public class Car {
         } else {
             this.year = year;
         }
-        if (country == "" || country == null) {
+        if (country.isEmpty() || country == null) {
             this.country = "default";
         } else {
             this.country = country;
