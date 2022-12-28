@@ -1,3 +1,5 @@
+package transport;
+
 public class Car {
 
     public static class Key {
@@ -39,7 +41,7 @@ public class Car {
     }
 
     /**
-     * Конструктор класса Car
+     * Конструктор класса transport.Car
      *
      * @param brand              - марка
      * @param model              - модель
