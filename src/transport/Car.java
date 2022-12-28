@@ -22,7 +22,7 @@ public class Car {
     private final String bodyType;
     private final String registrationNumber;
     private final int numberSeats;
-    private boolean summerOrWinterTires = false;
+    private boolean summerTires = true;
     private int monthNumber = 1;
     private Key key;
 
@@ -175,18 +175,31 @@ public class Car {
 
     public void getChangeTires(int monthNumber) {
         if (monthNumber >= 1 && monthNumber <= 4) {
-            summerOrWinterTires = false;
+            summerTires = !summerTires;
         } else if (monthNumber > 4 && monthNumber < 10) {
-            summerOrWinterTires = true;
+            summerTires = summerTires;
         } else if (monthNumber >= 10 && monthNumber <= 12) {
-            summerOrWinterTires = false;
+            summerTires = !summerTires;
         }
-        if (summerOrWinterTires) {
+        if (summerTires) {
             System.out.println("Летняя резина");
         } else {
             System.out.println("Зимняя резина");
         }
+    }
 
-
+    public void setChangeTires(int monthNumber) {
+        if (monthNumber >= 1 && monthNumber <= 4) {
+            summerTires = false;
+        } else if (monthNumber > 4 && monthNumber < 10) {
+            summerTires = true;
+        } else if (monthNumber >= 10 && monthNumber <= 12) {
+            summerTires = false;
+        }
+        if (summerTires) {
+            System.out.println("Летняя резина");
+        } else {
+            System.out.println("Зимняя резина");
+        }
     }
 }

@@ -24,6 +24,9 @@ public class Main {
 
         kia.getChangeTires(5);
         bmw.getChangeTires(12);
+        bmw.setChangeTires(6);
+        audi.setChangeTires(11);
+        hyundai.setChangeTires(3);
 
         Car.Key key = new Car.Key(true, false);
     }
