@@ -148,15 +148,27 @@ public class Car {
     }
 
     public void setEngine(double engine) {
-        this.engine = engine;
+        if (engine <= 0) {
+            this.engine = 1.5;
+        } else {
+            this.engine = engine;
+        }
     }
 
     public void setColor(String color) {
-        this.color = color;
+        if (color.isEmpty() || color == null) {
+            this.color = "белый";
+        } else {
+            this.color = color;
+        }
     }
 
     public void setGearBox(String gearBox) {
-        this.gearBox = gearBox;
+        if (gearBox.isEmpty() || gearBox == null) {
+            this.gearBox = "default";
+        } else {
+            this.gearBox = gearBox;
+        }
     }
 
     public void getChangeTires(int monthNumber) {
