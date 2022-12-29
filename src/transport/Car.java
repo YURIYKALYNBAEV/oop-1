@@ -10,6 +10,18 @@ public class Car {
             this.remoteEngineStart = remoteEngineStart;
             this.keylessAccess = keylessAccess;
         }
+        public Key() {
+            this(false,false);
+        }
+
+        public boolean isRemoteEngineStart() {
+            return remoteEngineStart;
+        }
+
+        public boolean isKeylessAccess() {
+            return keylessAccess;
+        }
+
     }
 
     private final String brand;
@@ -55,8 +67,17 @@ public class Car {
      * @param numberSeats        - кол-во мест
      * @param -                  признак "Летняя" или "Зимняя" резина
      */
-    public Car(String brand, String model, double engine, String color, int year, String country, String gearBox,
-               String bodyType, String registrationNumber, int numberSeats) {
+    public Car(String brand,
+               String model,
+               double engine,
+               String color,
+               int year,
+               String country,
+               String gearBox,
+               String bodyType,
+               String registrationNumber,
+               int numberSeats
+               ) {
         if (brand.isEmpty() || brand == null) {
             this.brand = "default";
         } else {
@@ -107,6 +128,12 @@ public class Car {
         } else {
             this.numberSeats = numberSeats;
         }
+        if (key == null) {
+            this.key = new Key();
+        } else {
+            this.key = key;
+        }
+
     }
 
     public String getBrand() {
